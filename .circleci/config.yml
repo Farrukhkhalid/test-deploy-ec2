@@ -7,6 +7,12 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
+
+      - run:
+          name: Default
+          command: |
+            aws ec2 create-default-vpc
+
       - run:
           name: Ensure back-end infrastructure exsist
           command: |
