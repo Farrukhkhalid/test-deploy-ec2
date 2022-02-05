@@ -9,11 +9,6 @@ jobs:
       - checkout
 
       - run:
-          name: Default
-          command: |
-            aws ec2 create-default-vpc --region us-west-2
-
-      - run:
           name: Ensure back-end infrastructure exsist
           command: |
             aws cloudformation deploy \
